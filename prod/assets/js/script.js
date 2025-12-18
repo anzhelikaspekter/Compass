@@ -72,18 +72,9 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ===============================
         LAZY VIDEO
     =============================== */
-    const video = document.querySelector('.hire__video');
+    const video = document.querySelector('.hire__video video');
 
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-            video.src = video.dataset.src;
-            video.play();
-        });
-    } else {
-        setTimeout(() => {
-            video.src = video.dataset.src;
-            video.play();
-        }, 1500);
+    if (video) {
+        video.play().catch(() => { });
     }
-
 });
