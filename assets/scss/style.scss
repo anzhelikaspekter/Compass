@@ -1,0 +1,52 @@
+/* CSS VARIABLES */
+@use "base/reset";
+@use "base/variables";
+@use "base/mixins";
+@use "base/fonts";
+@use "base/scrollbar";
+
+@use "components/preload";
+@use "components/title";
+@use "components/desc";
+@use "components/logo";
+@use "components/nav";
+
+@use "layout/header";
+@use "layout/hire";
+@use "layout/blog/promo";
+@use "layout/blog/gallery";
+@use "layout/services";
+@use "layout/process";
+@use "layout/partners";
+@use "layout/footer";
+
+.shadow {
+    box-shadow: var(--shadow-soft);
+}
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    &:focus {
+        top: 0;
+    }
+}
+
+[hidden] {
+    display: none;
+}
+
+.visually-hidden {
+    @include mixins.visually-hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    @include mixins.section-padding;
+    @include mixins.section-inner;
+}

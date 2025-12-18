@@ -1,0 +1,299 @@
+@use "variables";
+
+@mixin fluid-type($min, $mobile, $tablet, $desktop) {
+	& {
+		font-size: $min;
+	}
+
+	@media (min-width: 465px) {
+		font-size: $mobile;
+	}
+
+	@media (min-width: 768px) {
+		font-size: $tablet;
+	}
+
+	@media (min-width: 1280px) {
+		font-size: $desktop;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: (variables.$bp-tablet)) and (max-width: (variables.$bp-tablet - 0.1)) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: (variables.$bp-mobile)) and (max-width: (variables.$bp-tablet - 0.1)) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (min-width: (variables.$bp-xs)) and (max-width: (variables.$bp-mobile - 0.1)) {
+		@content;
+	}
+}
+
+@mixin xs {
+	@media (max-width: (variables.$bp-xs - 0.1)) {
+		@content;
+	}
+}
+
+@mixin section-padding {
+	padding-top: var(--section-padding-desktop);
+	padding-bottom: var(--section-padding-desktop);
+	padding-left: var(--section-margin-desktop);
+	padding-right: var(--section-margin-desktop);
+
+	@include tablet {
+		padding-top: var(--section-padding-tablet);
+		padding-bottom: var(--section-padding-tablet);
+		padding-left: var(--section-margin-tablet);
+		padding-right: var(--section-margin-tablet);
+	}
+
+	@include mobile {
+		padding-top: var(--section-padding-mobile);
+		padding-bottom: var(--section-padding-mobile);
+		padding-left: var(--section-margin-mobile);
+		padding-right: var(--section-margin-mobile);
+	}
+
+	@include xs {
+		padding-top: var(--section-padding-mobile);
+		padding-bottom: var(--section-padding-mobile);
+		padding-left: var(--section-margin-mobile);
+		padding-right: var(--section-margin-mobile);
+	}
+}
+
+@mixin section-inner {
+	gap: var(--section-inner-desktop);
+
+	@include tablet {
+		gap: var(--section-inner-tablet);
+	}
+
+	@include mobile {
+		gap: var(--section-inner-mobile);
+	}
+
+	@include xs {
+		gap: var(--section-inner-mobile);
+	}
+}
+
+@mixin gap {
+	gap: var(--gap-desktop);
+
+	@include tablet {
+		gap: var(--gap-tablet);
+	}
+
+	@include mobile {
+		gap: var(--gap-mobile);
+	}
+
+	@include xs {
+		gap: var(--gap-mobile);
+	}
+}
+
+@mixin nav-link {
+	display: flex;
+	padding: 5px 0;
+	justify-content: center;
+	align-items: center;
+	gap: var(--btn-gap-desktop);
+	flex-shrink: 0;
+	font-family: var(--font-primary);
+	font-weight: var(--nav-weight);
+	line-height: var(--nav-line-height);
+	letter-spacing: var(--nav-letter-spacing);
+	border-bottom: 2px solid transparent;
+	transition: var(--transition-all);
+	cursor: pointer;
+	@include body-2;
+	&:hover {
+		color: var(--color-primary-accent);
+		border-bottom: 2px solid var(--color-primary-accent);
+		transition: var(--transition-all);
+	}
+	&.active {
+		color: var(--color-primary-accent);
+		border-bottom: 2px solid var(--color-primary-accent);
+		transition: var(--transition-all);
+	}
+	@include tablet {
+		height: 40px;
+		gap: var(--btn-gap-tablet);
+	}
+	@include mobile {
+		height: 36px;
+		gap: var(--btn-gap-mobile);
+	}
+	@include xs {
+		height: 36px;
+		gap: var(--btn-gap-mobile);
+	}
+}
+
+@mixin nav-footer-link {
+	display: flex;
+	padding: 5px 0;
+	gap: var(--btn-gap-desktop);
+	flex-shrink: 0;
+	font-family: var(--font-primary);
+	font-weight: var(--nav-weight);
+	line-height: var(--nav-line-height);
+	letter-spacing: var(--nav-letter-spacing);
+	border-bottom: 2px solid transparent;
+	transition: var(--transition-all);
+	cursor: pointer;
+	@include body-2;
+	& {
+		color: var(--color-primary-light);
+	}
+	&:hover {
+		color: var(--color-primary-light);
+		border-bottom: 2px solid var(--color-primary-light);
+		transition: var(--transition-all);
+	}
+	&.active {
+		color: var(--color-primary-light);
+		border-bottom: 2px solid var(--color-primary-light);
+		transition: var(--transition-all);
+		&:hover {
+			color: var(--color-primary-light);
+			border-bottom: 2px solid var(--color-primary-accent);
+			transition: var(--transition-all);
+		}
+	}
+	@include tablet {
+		height: 40px;
+		gap: var(--btn-gap-tablet);
+	}
+	@include mobile {
+		height: 36px;
+		gap: var(--btn-gap-mobile);
+	}
+	@include xs {
+		height: 36px;
+		gap: var(--btn-gap-mobile);
+	}
+}
+
+@mixin line-clamp($lines: 2) {
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+@mixin visually-hidden {
+	& {
+		position: absolute !important;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+		border: 0;
+	}
+}
+
+@mixin h1 {
+	font-family: var(--font-secondary);
+	font-weight: var(--h1-weight);
+	line-height: clamp(var(--h1-line-height-mobile), calc(var(--h1-line-height) + 0.2vw), var(--h1-line-height));
+	letter-spacing: var(--h1-letter-spacing);
+	color: var(--color-primary-light);
+	text-transform: uppercase;
+	@include fluid-type(var(--h1-mobile), var(--h1-mobile), var(--h1-tablet), var(--h1-desktop));
+}
+
+@mixin h2 {
+	font-family: var(--font-secondary);
+	font-weight: var(--h2-weight);
+	line-height: clamp(var(--h2-line-height-mobile), calc(var(--h2-line-height) + 0.2vw), var(--h2-line-height));
+	letter-spacing: var(--h2-letter-spacing);
+	color: var(--color-primary-accent);
+	text-transform: uppercase;
+	@include fluid-type(var(--h2-mobile), var(--h2-mobile), var(--h2-tablet), var(--h2-desktop));
+}
+
+@mixin h3 {
+	font-family: var(--font-primary);
+	font-weight: var(--h3-weight);
+	line-height: var(--h3-line-height);
+	letter-spacing: var(--h3-letter-spacing);
+	color: var(--color-primary-accent);
+	text-transform: uppercase;
+	@include fluid-type(var(--h3-mobile), var(--h3-mobile), var(--h3-tablet), var(--h3-desktop));
+}
+
+@mixin h4 {
+	font-family: var(--font-primary);
+	font-weight: var(--h4-weight);
+	line-height: var(--h4-line-height);
+	letter-spacing: var(--h4-letter-spacing);
+	color: var(--color-primary-light);
+	@include fluid-type(var(--h4-mobile), var(--h4-mobile), var(--h4-tablet), var(--h4-desktop));
+}
+
+@mixin body-1 {
+	font-family: var(--font-primary);
+	font-weight: var(--body1-weight);
+	line-height: var(--body1-line-height);
+	letter-spacing: var(--body1-letter-spacing);
+	color: var(--color-primary-middle);
+	@include fluid-type(var(--body1-mobile), var(--body1-mobile), var(--body1-tablet), var(--body1-desktop));
+}
+
+@mixin body-2 {
+	font-family: var(--font-primary);
+	font-weight: var(--body2-weight);
+	line-height: var(--body2-line-height);
+	letter-spacing: var(--body2-letter-spacing);
+	color: var(--color-primary-middle);
+	@include fluid-type(var(--body2-mobile), var(--body2-mobile), var(--body2-tablet), var(--body2-desktop));
+}
+
+@mixin caption {
+	font-family: var(--font-primary);
+	font-weight: var(--caption-weight);
+	line-height: var(--caption-line-height);
+	letter-spacing: var(--caption-letter-spacing);
+	color: var(--color-secondary-light);
+	@include fluid-type(var(--caption-mobile), var(--caption-mobile), var(--caption-tablet), var(--caption-desktop));
+}
+
+@mixin logo {
+	display: flex;
+	justify-content: flex-start;
+	width: 130px;
+	height: 31px;
+	transition: var(--transition-all);
+	cursor: pointer;
+	&.active {
+		transition: var(--transition-all);
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+@mixin preload {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+	object-fit: contain;
+}

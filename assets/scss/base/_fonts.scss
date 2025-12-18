@@ -1,0 +1,60 @@
+/* rubik-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/rubik/rubik-v28-latin-regular.woff2") format("woff2");
+}
+/* rubik-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/rubik/rubik-v28-latin-500.woff2") format("woff2");
+}
+/* rubik-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/rubik/rubik-v28-latin-600.woff2") format("woff2");
+}
+/* rubik-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/rubik/rubik-v28-latin-700.woff2") format("woff2");
+}
+/* rubik-800 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/rubik/rubik-v28-latin-800.woff2") format("woff2");
+}
+/* rubik-900 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/rubik/rubik-v28-latin-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Druk Text Wide";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/druk/druk-regular.eot");
+    src: url("../fonts/druk/druk-regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/druk/druk-regular.woff2") format("woff2"),
+    url("../fonts/druk/druk-regular.woff")format("woff"),
+    url("../fonts/druk/druk-regular.ttf")format("truetype");
+}

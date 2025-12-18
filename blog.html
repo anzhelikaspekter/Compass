@@ -3,29 +3,76 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compass Blog</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="assets/fancybox.css" />
+
+    <title>Compass Blog — Insights on Software Development & IT</title>
+    <meta name="description"
+        content="Compass Blog shares insights, articles, and expertise on software development, IT consulting, UI/UX design, cloud solutions, and modern digital technologies.">
+    <meta name="keywords"
+        content="software development blog, IT consulting blog, UI UX articles, cloud solutions insights, tech blog">
+
+    <!-- Author -->
+    <meta name="author" content="Anzhelika Spekter">
+    <meta name="copyright" content="© 2024 Compass">
+    <meta name="publisher" content="Anzhelika Spekter">
+
+    <!-- NOINDEX (оставляем, если блог пока не для индексации) -->
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Compass Blog — Software Development & IT Insights">
+    <meta property="og:description"
+        content="Articles and insights on software development, IT consulting, UI/UX design, and scalable digital solutions.">
+    <meta property="og:image" content="https://your-domain.com/og-blog.jpg">
+    <meta property="og:url" content="https://your-domain.com/blog/">
+    <meta property="og:site_name" content="Compass">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compass Blog — Software Development & IT Insights">
+    <meta name="twitter:description"
+        content="Expert articles on software development, IT consulting, UI/UX design, and modern technologies.">
+    <meta name="twitter:image" content="https://your-domain.com/og-blog.jpg">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="apple-mobile-web-app-status-bar" content="#FFFFFF">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicons/favicon.ico?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16.png?v=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png?v=1">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg?v=1" color="#262B57">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Styles -->
+    <link rel="preload" href="assets/css/style.min.css" as="style">
+    <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
-<body>
-    <div class="preloader-container">
-        <div class="preloader"></div>
+<body aria-busy="true">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Preloader -->
+    <div class="preloader-container" aria-hidden="true">
+        <div class="preloader">
+        </div>
     </div>
-    <header class="header header--blog" id="header">
-        <a class="logo" href="index.html" target="_self">
-            <img src="img/logo_dark.svg" width="130" height="25" alt="Compass logo" class="logo__img">
+    <!-- Header -->
+    <header class="header header--blog">
+        <a class="logo" href="index.html" aria-label="Compass home">
+            <img decoding="async" src="assets/img/logos/logo_dark.svg" width="130" height="25" alt="Compass logo"
+                class="logo__img">
         </a>
-        <nav class="nav">
+
+        <nav class="nav" aria-label="Main navigation">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="index.html" target="_self" class="nav__link">Company</a>
+                    <a href="index.html" class="nav__link">Company</a>
                 </li>
                 <li class="nav__item">
-                    <a href="blog.html" target="_self" class="nav__link">Blog</a>
+                    <a href="blog.html" class="nav__link active" aria-current="page">Blog</a>
                 </li>
                 <li class="nav__item">
                     <a href="#footer" class="nav__link">Contacts</a>
@@ -33,73 +80,194 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="promo">
-            <h1 class="title title__main title__main--classic title__main--color">Blog</h1>
-            <p class="text">Now our blog is&nbsp;completely dedicated to&nbsp;helping Armed Forces of&nbsp;Ukraine</p>
+    <!-- Content -->
+    <main id="main">
+        <section class="section promo">
+            <h1 class="title title__main">
+                Blog
+            </h1>
+            <p class="text">
+                Our blog is&nbsp;dedicated to&nbsp;supporting the Armed Forces of&nbsp;Ukraine.
+            </p>
+            <picture class="promo__img">
+                <source type="image/webp"
+                    srcset="assets/img/promo/bg_promo-320.webp 320w, assets/img/promo/bg_promo-640.webp 640w, assets/img/promo/bg_promo-1280.webp 1280w, assets/img/promo/bg_promo-1280.webp 1280w"
+                    sizes="(max-width: 480px) 100vw, (max-width: 768px) 100vw, (max-width: 1280px) 80vw, (max-width: 1440px) 60vw, 1280px">
+                <img src="assets/img/promo/bg_promo-1280.webp" width="1280" height="420" alt="" decoding="async"
+                    fetchpriority="high">
+            </picture>
         </section>
-        <section class="gallery">
-            <a class="gallery__item" href="img/img_11.webp" data-fancybox="gallery-a">
-                <img loading="lazy" class="gallery__img" src="img/img_11.webp" />
-            </a>
-            <a class="gallery__item" href="img/img_12.webp" data-fancybox="gallery-a">
-                <img loading="lazy" class="gallery__img" src="img/img_12.webp" />
-            </a>
-            <a class="gallery__item" href="img/img_13.webp" data-fancybox="gallery-a">
-                <img loading="lazy" class="gallery__img" src="img/img_13.webp" />
-            </a>
-            <a class="gallery__item" href="img/img_14.webp" data-fancybox="gallery-a">
-                <img loading="lazy" class="gallery__img" src="img/img_14.webp" />
-            </a>
-            <a class="gallery__item" href="img/img_15.webp" data-fancybox="gallery-a">
-                <img loading="lazy" class="gallery__img" src="img/img_15.webp" />
-            </a>
-            <a class="gallery__item" href="img/img_16.webp" data-fancybox="gallery-a">
-                <img loading="lazy" class="gallery__img" src="img/img_16.webp" />
-            </a>
-            <a class="gallery__item" href="img/img_17.webp" data-fancybox="gallery-a">
-                <img loading="lazy" class="gallery__img" src="img/img_17.webp" />
-            </a>
+        <section class="section gallery" aria-labelledby="gallery-title">
+            <h2 id="gallery-title" class="visually-hidden">
+                Charity gallery
+            </h2>
+
+            <figure class="gallery__item" aria-label="Open charity gallery image 1">
+                <picture class="gallery__img">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_11-320.webp 320w"
+                        sizes="(max-width: 464.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_11-640.webp 640w"
+                        sizes="(max-width: 767.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_11-1280.webp 1280w"
+                        sizes="(min-width: 768px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/full/img_11.webp 1920w"
+                        sizes="(min-width: 1280px) 100vw, 33vw">
+                    <img src="assets/img/gallery/full/img_11.webp" width="1920" height="1080"
+                        alt="Volunteers sorting humanitarian aid supplies near a Ukrainian flag" loading="lazy" decoding="async">
+                </picture>
+            </figure>
+
+            <figure class="gallery__item" aria-label="Open charity gallery image 2">
+                <picture class="gallery__img">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_12-320.webp 320w"
+                        sizes="(max-width: 464.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_12-640.webp 640w"
+                        sizes="(max-width: 767.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_12-1280.webp 1280w"
+                        sizes="(min-width: 768px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/full/img_12.webp 1920w"
+                        sizes="(min-width: 1280px) 100vw, 33vw">
+                    <img src="assets/img/gallery/full/img_12.webp" width="1920" height="1080"
+                        alt="Van used for delivering humanitarian aid" loading="lazy" decoding="async">
+                </picture>
+            </figure>
+
+            <figure class="gallery__item" aria-label="Open charity gallery image 3">
+                <picture class="gallery__img">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_13-320.webp 320w"
+                        sizes="(max-width: 464.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_13-640.webp 640w"
+                        sizes="(max-width: 767.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_13-1280.webp 1280w"
+                        sizes="(min-width: 768px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/full/img_13.webp 1920w"
+                        sizes="(min-width: 1280px) 100vw, 33vw">
+                    <img src="assets/img/gallery/full/img_13.webp" width="1920" height="1080"
+                        alt="Protective tactical vests prepared for donation" loading="lazy" decoding="async">
+                </picture>
+            </figure>
+
+            <figure class="gallery__item" aria-label="Open charity gallery image 4">
+                <picture class="gallery__img">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_14-320.webp 320w"
+                        sizes="(max-width: 464.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_14-640.webp 640w"
+                        sizes="(max-width: 767.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_14-1280.webp 1280w"
+                        sizes="(min-width: 768px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/full/img_14.webp 1920w"
+                        sizes="(min-width: 1280px) 100vw, 33vw">
+                    <img src="assets/img/gallery/full/img_14.webp" width="1920" height="1080"
+                        alt="Humanitarian aid boxes being loaded into a vehicle" loading="lazy" decoding="async">
+                </picture>
+            </figure>
+
+            <figure class="gallery__item" aria-label="Open charity gallery image 5">
+                <picture class="gallery__img">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_15-320.webp 320w"
+                        sizes="(max-width: 464.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_15-640.webp 640w"
+                        sizes="(max-width: 767.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_15-1280.webp 1280w"
+                        sizes="(min-width: 768px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/full/img_15.webp 1920w"
+                        sizes="(min-width: 1280px) 100vw, 33vw">
+                    <img src="assets/img/gallery/full/img_15.webp" width="1920" height="1080"
+                        alt="Assembled tourniquets prepared for medical aid kits" loading="lazy" decoding="async">
+                </picture>
+            </figure>
+
+            <figure class="gallery__item" aria-label="Open charity gallery image 6">
+                <picture class="gallery__img">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_16-320.webp 320w"
+                        sizes="(max-width: 464.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_16-640.webp 640w"
+                        sizes="(max-width: 767.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_16-1280.webp 1280w"
+                        sizes="(min-width: 768px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/full/img_16.webp 1920w"
+                        sizes="(min-width: 1280px) 100vw, 33vw">
+                    <img src="assets/img/gallery/full/img_16.webp" width="1920" height="1080"
+                        alt="Volunteers posing during humanitarian aid preparation" loading="lazy" decoding="async">
+                </picture>
+            </figure>
+
+            <figure class="gallery__item" aria-label="Open charity gallery image 7">
+                <picture class="gallery__img">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_17-320.webp 320w"
+                        sizes="(max-width: 464.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_17-640.webp 640w"
+                        sizes="(max-width: 767.9px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/thumbs/img_17-1280.webp 1280w"
+                        sizes="(min-width: 768px) 100vw, 33vw">
+                    <source type="image/webp" srcset="assets/img/gallery/full/img_17.webp 1920w"
+                        sizes="(min-width: 1280px) 100vw, 33vw">
+                    <img src="assets/img/gallery/full/img_17.webp" width="1920" height="1080"
+                        alt="Humanitarian aid boxes stacked inside a delivery truck" loading="lazy" decoding="async">
+                </picture>
+            </figure>
         </section>
     </main>
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="section footer" id="footer">
         <div class="footer__header">
-            <a class="logo" href="index.html">
-                <img src="img/logo_light.svg" width="130" height="25" alt="Compass logo" class="logo__img">
+            <a class="logo" href="index.html" aria-label="Compass home">
+                <img decoding="async" src="assets/img/logos/logo_light.svg" width="130" height="31" alt="Compass logo"
+                    class="logo__img">
             </a>
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <a href="#header" class="footer__link">Company</a>
-                </li>
-                <li class="footer__item">
-                    <a href="blog.html" target="_self" class="footer__link">Blog</a>
-                </li>
-            </ul>
+
+            <nav class="footer__nav" aria-label="Footer navigation">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#header" class="footer__link">Company</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="blog.html" class="footer__link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <ul class="footer__bottom">
-            <li class="footer__bottom-item">
-                <p class="footer__text">Compass &copy;&nbsp;2015&nbsp;&mdash; 2024</p>
-            </li>
-            <li class="footer__bottom-item">
-                <p class="footer__text">KYIV, VOLODYMYRSKA ST. <br>
-                    NEW LOCATION IS KONTRAKTOVA SQUARE, <br> KYIV, UKRAINE, 01033</p>
-                <p class="footer__text">
-                    <a class="footer__tel" href="tel:+380630391392">+380 63 039 13 92</a> <br>
-                    <a class="footer__tel" href="tel:+380939312935">+380 93 931 29 35</a>
-                </p>
-            </li>
-        </ul>
-        <div id="footer"></div>
+
+        <div class="footer__bottom">
+            <p class="footer__text">
+                Compass &copy; 2015&ndash;2025
+            </p>
+
+            <address class="footer__address">
+                <div class="footer__contacts">
+                    <p class="footer__text">
+                        <a href="https://maps.google.com/?q=Kyiv,+Volodymyrska+Street,+01033" target="_blank"
+                            rel="noopener noreferrer" class="footer__address-link"
+                            aria-label="Open Volodymyrska Street on Google Maps">
+                            Volodymyrska St.
+                        </a>
+                    </p>
+                    <p class="footer__text">
+                        New location:
+                        <a href="https://maps.google.com/?q=Kyiv,+Kontraktova+Square,+01033" target="_blank"
+                            rel="noopener noreferrer" class="footer__address-link"
+                            aria-label="Open Kontraktova Square on Google Maps">
+                            Kontraktova Square
+                        </a>
+                    </p>
+                    <p class="footer__text">
+                        Kyiv, Ukraine, 01033
+                    </p>
+                </div>
+
+                <div class="footer__contacts">
+                    <a class="footer__tel" href="tel:+380630391392" aria-label="Call +380 63 039 13 92">
+                        +380&nbsp;63&nbsp;039&nbsp;13&nbsp;92
+                    </a>
+                    <a class="footer__tel" href="tel:+380939312935" aria-label="Call +380 93 931 29 35">
+                        +380&nbsp;93&nbsp;931&nbsp;29&nbsp;35
+                    </a>
+                </div>
+            </address>
+        </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="assets/fancybox.umd.js"></script>
-    <script>
-        Fancybox.bind('[data-fancybox="gallery-a"]', {
-            Carousel: {
-                infinite: false
-            }
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>

@@ -1,0 +1,129 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.services {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--color-primary-light);
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include mixins.gap;
+        & .text {
+            max-width: 430px;
+        }
+        @include mixins.mobile {
+            flex-wrap: wrap;
+        }
+        @include mixins.xs {
+            flex-wrap: wrap;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        @include mixins.gap;
+    }
+    &__item {
+        width: 100%;
+        flex: 1 1 calc(100% / 5 - var(--gap-desktop));
+        min-height: 250px;
+        padding: 20px;
+        border: 1px solid var(--color-secondary-light);
+        border-radius: 2px;
+        background-color: var(--color-primary-light);
+        @include mixins.tablet {
+            flex: 0 1 calc(100% / 3 - var(--gap-tablet));
+        }
+        @include mixins.mobile {
+            flex: 1 1 calc(100% / 2 - var(--gap-mobile));
+        }
+        @include mixins.xs {
+            flex: 1 1 calc(100% - var(--gap-mobile));
+        }
+        &:hover {
+            border: 1px solid var(--accedent-primary);
+            & a {
+                & hr {
+                    background-color: var(--color-primary-light);
+                    border: none;
+                }
+                & h3 {
+                    color: var(--color-primary-light);
+                }
+                & p {
+                    color: var(--color-secondary-light);
+                }
+            }
+            &.target {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_1.webp);
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+            &.digital {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_2.webp);
+            }
+            &.smm {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_3.webp);
+                background-size: cover;
+                background-position: 40% 50%;
+                background-repeat: no-repeat;
+            }
+            &.blockchain {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_4.webp);
+            }
+            &.business {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_5.webp);
+            }
+            &.cloud {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_6.webp);
+            }
+            &.devops {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_7.webp);
+            }
+            &.apps {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_8.webp);
+            }
+            &.qa {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_9.webp);
+            }
+            &.uiux {
+                background-image:
+                    linear-gradient(to top, rgba(38, 43, 87, 0.85), rgba(38, 43, 87, 0.85)), url(../img/img_10.webp);
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-mobile);
+        text-decoration: none;
+        & hr {
+            width: 2.5vw;
+            height: 2px;
+            background-color: var(--color-primary-accent);
+            border: none;
+        }
+        & h3 {
+            line-height: 1.4;
+            min-height: calc(1.4em * 2);
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+    }
+}

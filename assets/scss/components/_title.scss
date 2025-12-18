@@ -1,0 +1,30 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.title {
+    &__main {
+        @include mixins.h1;
+        & {
+            width: 100%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+        }
+        &--right {
+            text-align: right;
+        }
+        &--center {
+            text-align: center;
+        }
+    }
+    &__secondary {
+        @include mixins.h2;
+        & {
+            max-width: 380px;
+        }
+    }
+    &__card {
+        @include mixins.h3;
+    }
+}

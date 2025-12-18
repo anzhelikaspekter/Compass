@@ -1,0 +1,40 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    @include mixins.gap;
+    & .nav__link {
+        color: var(--color-primary-light);
+        &:hover {
+            color: var(--color-primary-light);
+            border-bottom: 2px solid var(--color-primary-light);
+        }
+        &.active {
+            color: var(--color-primary-light);
+            border-bottom: 2px solid var(--color-primary-light);
+        }
+    }
+    &--blog {
+        background-color: var(--color-primary-light);
+        @include mixins.gap;
+        & .nav__link {
+            color: var(--color-primary-middle);
+            &:hover {
+                color: var(--color-primary-middle);
+                border-bottom: 2px solid var(--color-primary-accent);
+            }
+            &.active {
+                color: var(--color-primary-accent);
+                border-bottom: 2px solid var(--color-primary-accent);
+            }
+        }
+    }
+}

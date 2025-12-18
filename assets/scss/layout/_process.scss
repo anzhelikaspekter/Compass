@@ -1,0 +1,142 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.process {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--color-primary-middle);
+    &__header {
+        display: flex;
+        align-items: center;
+        @include mixins.gap;
+        @include mixins.tablet {
+            flex-wrap: wrap;
+        }
+        @include mixins.mobile {
+            flex-wrap: wrap;
+        }
+        @include mixins.xs {
+            flex-wrap: wrap;
+        }
+        & .title {
+            color: var(--color-primary-light);
+        }
+    }
+    &__main {
+        width: 100%;
+        overflow: hidden;
+    }
+    &__wrap {
+        width: 100%;
+    }
+    &__step {
+        width: calc(100% * 4);
+        display: flex;
+        align-items: flex-start;
+        @include mixins.gap;
+        &-item {
+            width: 100%;
+        }
+    }
+    &__card {
+        width: 100%;
+        &-list {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            @include mixins.gap;
+        }
+        &-item {
+            &--small {
+                width: 100%;
+                flex: 1 1 calc(10% - var(--gap-desktop));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: var(--section-inner-tablet);
+                border-bottom: 1px solid var(--color-secondary-light);
+                @include mixins.tablet {
+                    flex: 1 1 calc(10% - var(--gap-tablet));
+                }
+                @include mixins.mobile {
+                    flex: 1 1 calc(10% - var(--gap-mobile));
+                }
+                @include mixins.xs {
+                    flex: 1 1 calc(10% - var(--gap-mobile));
+                }
+                & .title {
+                    @include mixins.h3;
+                    & {
+                        font-family: var(--font-primary);
+                        color: var(--color-secondary-light);
+                    }
+                }
+            }
+            &--big {
+                width: 100%;
+                flex: 1 1 calc(90% - var(--gap-desktop));
+                display: flex;
+                flex-direction: column;
+                gap: var(--section-inner-mobile);
+                @include mixins.tablet {
+                    flex: 1 1 calc(90% - var(--gap-tablet));
+                }
+                @include mixins.mobile {
+                    flex: 1 1 calc(90% - var(--gap-mobile));
+                }
+                @include mixins.xs {
+                    flex: 1 1 calc(90% - var(--gap-mobile));
+                }
+                & .title {
+                    @include mixins.h3;
+                    & {
+                        font-family: var(--font-secondary);
+                        color: var(--color-secondary-light);
+                    }
+                }
+                & .text {
+                    @include mixins.h4;
+                    & {
+                        color: var(--color-secondary-light);
+                    }
+                }
+            }
+        }
+    }
+    &__footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @include mixins.gap;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        @include mixins.mobile {
+            flex-direction: column;
+        }
+        @include mixins.xs {
+            flex-direction: column;
+        }
+        &-item {
+            width: 100%;
+            flex: 1 1 calc(100% / 4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-top: 7px solid transparent;
+            & .text {
+                color: var(--color-secondary-light);
+            }
+            &.active {
+                background: var(--color-secondary-light);
+                border-top: 7px solid var(--color-primary-accent);
+                & .text {
+                    color: var(--color-primary-accent);
+                }
+            }
+        }
+    }
+}

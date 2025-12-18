@@ -1,0 +1,45 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.loaded .preloader-container {
+    opacity: 1;
+    visibility: hidden;
+}
+
+.preloader-container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--preload-bg-color, rgba(0, 0, 0, 0.5));
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    pointer-events: none;
+}
+
+.preloader {
+    background: url(../img/preload/spinner.svg) no-repeat center / contain;
+    animation: spin 2s linear infinite;
+    will-change: transform;
+    @include mixins.preload;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .preloader {
+        animation: none;
+    }
+}

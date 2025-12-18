@@ -1,0 +1,63 @@
+@use "../../base/variables";
+@use "../../base/mixins";
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 70px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    @include mixins.tablet {
+        height: 40vw;
+    }
+    @include mixins.mobile {
+        height: 40vw;
+    }
+    @include mixins.xs {
+        height: auto;
+    }
+    & .title {
+        @include mixins.h1;
+        color: var(--color-primary-accent);
+    }
+    & .text {
+        width: 100%;
+        max-width: 70%;
+        position: relative;
+        z-index: 1;
+        @include mixins.tablet {
+            max-width: 60%;
+        }
+    }
+    &__img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        @include mixins.tablet {
+            height: auto;
+        }
+        @include mixins.mobile {
+            height: auto;
+        }
+        @include mixins.xs {
+            height: auto;
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            @include mixins.tablet {
+                height: auto;
+            }
+            @include mixins.mobile {
+                height: auto;
+            }
+            @include mixins.xs {
+                height: auto;
+            }
+        }
+    }
+}

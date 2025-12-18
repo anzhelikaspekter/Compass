@@ -1,0 +1,15 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.text {
+    @include mixins.body-2;
+    &--small {
+        @include mixins.caption;
+        & {
+            color: var(--color-primary-middle);
+        }
+    }
+    &--big {
+        @include mixins.h4;
+    }
+}
