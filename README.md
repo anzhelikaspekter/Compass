@@ -82,7 +82,7 @@ Performance optimization was carried out as part of the front-end delivery proce
 | **Performance**   | ![](https://img.shields.io/badge/88-orange)  | ![](https://img.shields.io/badge/98-brightgreen)  | ↑ +29       |
 | **Accessibility** | ![](https://img.shields.io/badge/84-orange) | ![](https://img.shields.io/badge/98-brightgreen) | ↑ +1        |
 | **Best Practices**| ![](https://img.shields.io/badge/96-brightgreen) | ![](https://img.shields.io/badge/100-brightgreen) | ↑ +29       |
-| **SEO**           | ![](https://img.shields.io/badge/66-orange) | ![](https://img.shields.io/badge/92-brightgreen) | —           |
+| **SEO**           | ![](https://img.shields.io/badge/66-orange) | ![](https://img.shields.io/badge/100-brightgreen) | —           |
 
 
 ### 🖼 Before / After 
@@ -100,7 +100,7 @@ Performance optimization was carried out as part of the front-end delivery proce
 | **Performance**   | ![](https://img.shields.io/badge/63-orange)  | ![](https://img.shields.io/badge/99-brightgreen)  | ↑ +36       |
 | **Accessibility** | ![](https://img.shields.io/badge/66-orange) | ![](https://img.shields.io/badge/100-brightgreen) | ↑ +34        |
 | **Best Practices**| ![](https://img.shields.io/badge/100-brightgreen) | ![](https://img.shields.io/badge/100-brightgreen) | —       |
-| **SEO**           | ![](https://img.shields.io/badge/82-orange) | ![](https://img.shields.io/badge/92-brightgreen) | ↑ +10           |
+| **SEO**           | ![](https://img.shields.io/badge/82-orange) | ![](https://img.shields.io/badge/100-brightgreen) | ↑ +18           |
 
 
 ### 🖼 Before / After 

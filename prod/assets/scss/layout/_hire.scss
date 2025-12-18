@@ -13,27 +13,9 @@
         @include mixins.mobile {
             font-size: 32px;
         }
-        &::before {
-            content: "";
-            background: url(../img/hire_img.webp) no-repeat center / contain;
-            position: absolute;
-            top: 0;
-            z-index: -1;
-            opacity: 0.95;
-            width: 100%;
-            max-width: 800px;
-            height: 410px;
-            transform: translateY(-22%);
-            @include mixins.tablet {
-                transform: translateY(-120px);
-            }
-            @include mixins.mobile {
-                transform: translateY(-150px);
-            }
-            @include mixins.xs {
-                transform: translateY(-160px);
-            }
-        }
+    }
+    &__bg {
+        position: absolute;
     }
     &__img {
         background-image: url(../img/hire_img.webp);
