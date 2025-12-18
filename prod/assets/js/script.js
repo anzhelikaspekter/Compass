@@ -68,4 +68,22 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    /* ===============================
+        LAZY VIDEO
+    =============================== */
+    const video = document.querySelector('.hire__video');
+
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+            video.src = video.dataset.src;
+            video.play();
+        });
+    } else {
+        setTimeout(() => {
+            video.src = video.dataset.src;
+            video.play();
+        }, 1500);
+    }
+
 });
