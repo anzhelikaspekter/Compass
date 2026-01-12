@@ -111,14 +111,6 @@ Performance optimization was carried out as part of the front-end delivery proce
 
 ---
 
-### 🎯 JSON reports
-- [Before JSON](./media/json/before.json)
-- [After JSON](./media/json/after.json)
-- [Before Blog JSON](./media/json/before-blog.json)
-- [After Blog JSON](./media/json/after-blog.json)
-
----
-
 ## Project Structure
 
 ```  
@@ -142,13 +134,14 @@ prod/
 
 ---
 
-## Author
+### 🎯 JSON reports
+- [Before JSON](./media/json/before.json)
+- [After JSON](./media/json/after.json)
+- [Before Blog JSON](./media/json/before-blog.json)
+- [After Blog JSON](./media/json/after-blog.json)
 
-### Anzhelika Spekter  
-UI/UX Product Designer & Front-End Developer
+---
 
-Front-end focus:
-- Design-to-code workflows
-- Performance-oriented UI implementation
-- Scalable and maintainable front-end architecture
+
+
 
